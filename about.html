@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About -SiRma Tech Hub </title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: black;
+      overflow-x: hidden;
+      color: white;
+      padding: 50px 20px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #00fff7, #0f0, #ff00cc, #00fff7);
+      background-size: 300% 300%;
+      animation: glitchBackground 12s ease infinite;
+      z-index: -1;
+      opacity: 0.07;
+      filter: blur(60px);
+    }
+
+    @keyframes glitchBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px cyan;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: cyan;
+      color: black;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .link:hover {
+      background: #00e5e5;
+      transform: scale(1.05);
+    }
+
+    .telegram-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0088cc;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4);
+      z-index: 1000;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .telegram-float:hover {
+      background-color: #0077b6;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>About SiRma Tech Hub</h1>
+  <div class="content">
+    <p>
+      SiRma Tech Hub  is a digital space dedicated to empowering tech enthusiasts, developers, and entrepreneurs across the country.
+      We believe in innovation, collaboration, and continuous learning.
+    </p>
+    <p>
+      Whether you're just getting started with coding, building your first startup, or contributing to open-source — we're here to grow with you.
+    </p>
+    <p>
+      Get in touch with us for partnerships, community events, or mentorship opportunities.
+    </p>
+    <div>
+      <div class="section">
+    <h2>Contact Information</h2>
+    <p><strong>Email:</strong> info@sirmatechhub.org</p>
+    <p><strong>Phone:</strong> +254 706 868 224</p>
+    <p><strong>Location:</strong> Nairobi Innovation District, Nairobi, Kenya</p>
+  </div>
+      <!-- Add this new section -->
+  <p>
+    Want to upload your VPN files?
+    <br>
+    <a href="vpn.html" class="link">Go to VPN Upload</a>
+  </p>
+
+  <a href="index.html" class="link">Back to Login</a>
+</div>
+  </div>
+  </div>
+
+  <!-- Floating Telegram Button -->
+  <a href="https://t.me/Sirma254TECH" target="_blank" class="telegram-float" title="Join us on Telegram">
+    Join Telegram
+  </a>
+</body>
+</html>

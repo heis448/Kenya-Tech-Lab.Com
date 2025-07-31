@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SiRma Tech Hub </title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: black;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #00fff7, #0f0, #ff00cc, #00fff7);
+      background-size: 300% 300%;
+      animation: glitchBackground 10s ease infinite;
+      z-index: -1;
+      opacity: 0.08;
+      filter: blur(50px);
+    }
+
+    @keyframes glitchBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.06);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    input {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    button {
+      background: cyan;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #00e5e5;
+    }
+
+    .telegram-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #0088cc;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .telegram-link:hover {
+      background-color: #0077b6;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>SiRma Tech Hub</h2>
+    <p style="margin-bottom: 20px; font-size: 14px; color: #00ffee;">
+      Powered by ༒Tylor ~ Heis_Tech༒💫
+    </p>
+
+    <form onsubmit="return redirectToAbout()">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <div style="margin-top: 20px;">
+      <div id="g_id_onload"
+           data-client_id="YOUR_GOOGLE_CLIENT_ID"
+           data-context="signin"
+           data-callback="handleGoogleLogin"
+           data-auto_prompt="false">
+      </div>
+
+      <div class="g_id_signin"
+           data-type="standard"
+           data-shape="rectangular"
+           data-theme="outline"
+           data-text="sign_in_with"
+           data-size="large">
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Join Our Telegram</h3>
+      <p>
+        Stay connected with our tech community on Telegram.<br>
+        <a href="https://t.me/Sirma254TECH" target="_blank" class="telegram-link">Join Now</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Hidden audio element -->
+  <audio id="bg-audio" src="Sound.mp3"></audio>
+
+  <!-- Mute/Unmute Button -->
+  <button onclick="toggleSound()" style="position: absolute; bottom: 20px; right: 20px;">Mute / Unmute Sound</button>
+
+  <script>
+    document.title = "SiRma Tech Hub💲";
+
+    function redirectToAbout() {
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username && password) {
+        if (username === "admin" && password === "1234") {
+          localStorage.setItem("techhub_role", "admin");
+          window.location.href = "vpn.html";
+        } else {
+          localStorage.removeItem("techhub_role");
+          window.location.href = "about.html";
+        }
+      } else {
+        alert("Please fill in both fields.");
+      }
+
+      return false;
+    }
+
+    // Play audio once after first click
+    window.addEventListener("click", function () {
+      const audio = document.getElementById("bg-audio");
+      if (audio.paused) {
+        audio.play().catch(err => console.log("Autoplay blocked:", err));
+      }
+    }, { once: true });
+
+    // Toggle mute
+    function toggleSound() {
+      const audio = document.getElementById("bg-audio");
+      audio.muted = !audio.muted;
+      
+    }
+  </script>
+</body>
+</html>

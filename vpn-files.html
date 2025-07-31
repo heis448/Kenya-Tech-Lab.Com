@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VPN Files -SiRma Tech Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #000;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2em;
+      color: cyan;
+      text-shadow: 0 0 10px cyan, 0 0 20px #00fff2;
+      animation: glitchText 2s infinite;
+    }
+
+    @keyframes glitchText {
+      0% { text-shadow: 2px 2px cyan; }
+      25% { text-shadow: -2px 2px magenta; }
+      50% { text-shadow: 2px -2px lime; }
+      75% { text-shadow: -2px -2px red; }
+      100% { text-shadow: 2px 2px cyan; }
+    }
+
+    .file-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+      z-index: 2;
+      position: relative;
+    }
+
+    .file-item {
+      background: rgba(0, 255, 255, 0.1);
+      border: 2px solid cyan;
+      border-radius: 15px;
+      padding: 20px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .file-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px cyan;
+    }
+
+    .file-name {
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    .download-link {
+      background: cyan;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .download-link:hover {
+      background: #00e5e5;
+      box-shadow: 0 0 10px #00e5e5;
+    }
+
+    .back-link {
+      margin-top: 50px;
+      display: inline-block;
+      color: #00ffee;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      text-shadow: 0 0 8px #00ffee;
+    }
+
+    .bg-glitch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 200%;
+      width: 200%;
+      background: repeating-linear-gradient(
+        120deg,
+        #00ffe0 0px,
+        #00ffe0 5px,
+        #0f0 5px,
+        #0f0 10px,
+        #ff00cc 10px,
+        #ff00cc 15px
+      );
+      opacity: 0.04;
+      z-index: 0;
+      animation: moveBackground 10s linear infinite;
+      filter: blur(20px);
+    }
+
+    @keyframes moveBackground {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(-25%, -25%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glitch"></div>
+
+  <h1>VPN Files - SiRma Tech Hub</h1>
+
+  <div class="file-list" id="fileList">
+    <!-- VPN file cards will be generated here -->
+  </div>
+
+  <a href="vpn.html" class="back-link">← Back to VPN Page</a>
+</p>
+  </style>
+</head>
+<body>
+  <h1>HOW TO OPEN AND IMPORT FILES FROM THIS WEBSITE✅</h1>
+  <div class="content">
+    <p>
+      To be able to OPEN 📂 Files you should have ZARCHIVER APP to decompress the zip file uploaded, then After decompressing you can easily view and use all the files uploaded. 
+      Thank you for choosing SiRma-Tech-Hub.Com.✅
+    </p>
+
+
+    
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" height="40" width="100%">
+</p>
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=3000&color=00FF00&background=000000&center=true&vCenter=true&width=600&lines=⚡+BEST+Rising+Technology;🔥+We+Are+SiRma+Tech+Hub;Dev+By+Heis_Tech;⚡+Secure+🔒+And+Fastest+Internet+Providers✅" ="Typing Animation">
+<p align="center">
+  <img src="https://i.imgur.com/dBaSKWF.gif" height="40" width="100%">
+</p>
+
+  <script>
+    const uploadedFiles = [
+      {
+        name: "Safaricom Files🔥🔥🔥",
+        appUrl: "https://www.mediafire.com/file/ve4ru04c875573v/Safaricom_Files%25E2%259C%2585.zip/file"
+      },
+      {
+        name: "Airtel Files 🌝🌝",
+        appUrl: "https://www.mediafire.com/file/1dgh9s2ch5j2326/Airtel_Files%25E2%259C%2585.zip/file"
+      },
+      {
+        name: "YouTube Bypass🔥🔥🔥",
+        appUrl: "https://www.mediafire.com/file/3mu22r0gw6q6268/YouTube_Bypass_%25E2%259C%2585.zip/file"
+      }
+    ];
+
+    const fileListContainer = document.getElementById("fileList");
+
+    uploadedFiles.forEach(file => {
+      const div = document.createElement("div");
+      div.className = "file-item";
+      div.innerHTML = `
+        <div class="file-name">${file.name}</div>
+        <a class="download-link" href="${file.appUrl}" target="_blank">Open in App</a>
+      `;
+      fileListContainer.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
